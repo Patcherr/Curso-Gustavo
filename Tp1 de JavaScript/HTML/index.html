@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <script src="node.js">
+    </script>
+    <link rel="stylesheet" href="Style(Ejercicio 1).css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <div>
+        Ingrese el primero numero:
+        <input type="number" name="Valor1" id="Valor1">
+        Ingrese el segundo numero:
+        <input type="number" name="Valor2" id="Valor2">
+        <!-- <input type="submit" value="Enviar"> -->
+        <br>
+        <input type="radio" name="Operador" value="sumar"> Sumar
+        <br>
+        <input type="radio" name="Operador" value="resta"> Restar
+        <br>
+        <input type="radio" name="Operador" value="multiplicar"> Multiplicar
+        <br>
+        <input type="radio" name="Operador" value="dividir"> División
+        <br>
+        <button id="Calcular" onclick="calcularOperacion()">
+            Calcular 
+        </button>
+    
+        <input type="text" readonly id="resultado" onclick="limpiarNumero()">
+        
+    </div>
+   
+    
+
+    
+
+
+    
+</body>
+</html>
