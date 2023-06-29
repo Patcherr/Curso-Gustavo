@@ -36,6 +36,9 @@
     border-radius: 5px;
     font-size: 18px;
   }
+  button:hover{
+    background-color: #45a049;
+  }
   
   .operator {
     background-color: #FF9800;
