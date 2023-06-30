@@ -24,7 +24,7 @@ formulario.addEventListener('submit', function(event) {
 
 const formulario = document.getElementById('miFormulario');
 
-formulario.addEventListener('submit', function(event) {
+formulario.addEventListener('submit', function (event) {
   event.preventDefault();
 
   const nombre = encodeURIComponent(document.getElementById('nombre').value);
@@ -40,4 +40,27 @@ formulario.addEventListener('submit', function(event) {
   // Redireccionar a otro archivo HTML con los datos como query string
   window.location.href = `form.html?${queryString}`;
 });
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+const nombre = urlParams.get('nombre');
+const apellido = urlParams.get('apellido');
+const dni = urlParams.get('dni');
+const fechaNacimiento = urlParams.get('fechaNacimiento');
+const genero = urlParams.get('genero');
+const conocimientos = urlParams.get('conocimientos').split(',');
+const bio = urlParams.get('bio');
+
+// Ahora puedes hacer lo que desees con los datos del formulario en otro_archivo.html
+// Por ejemplo, puedes mostrar los valores en la página:
+document.getElementById('nombreResultado').textContent = nombre;
+document.getElementById('apellidoResultado').textContent = apellido;
+document.getElementById('dniResultado').textContent = dni;
+document.getElementById('fechaNacimientoResultado').textContent = fechaNacimiento;
+document.getElementById('generoResultado').textContent = genero;
+document.getElementById('conocimientosResultado').textContent = conocimientos;
+document.getElementById('bioResultado').textContent = bio
+
+
 
