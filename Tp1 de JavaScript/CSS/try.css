@@ -9,7 +9,7 @@
   }
   
   .display {
-    width: 100%;
+    width: 97%;
     height: 40px;
     margin-bottom: 10px;
     font-size: 20px;
@@ -25,6 +25,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
+
   }
   
   button {
@@ -35,6 +36,8 @@
     border: none;
     border-radius: 5px;
     font-size: 18px;
+    margin: 5px;
+    
   }
   button:hover{
     animation: blink-hover 1s infinite;
