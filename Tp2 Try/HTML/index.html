@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <script src="../JS/node.js"></script>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
@@ -11,7 +11,8 @@
 
 <body>
   <h1>Formulario</h1>
-  <form id="miFormulario" method="get" action="form.html">
+  <form id="Formulario" method="get" action="form.html">
+    <script src="../JS/node.js"></script>
     <div class="form-group">
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" name="nombre" required>
@@ -58,7 +59,7 @@
       <label for="bio">Biografía:</label>
       <textarea id="bio" name="bio" rows="4" required></textarea>
     </div>
-    <button type="submit">Enviar</button>
+    <button id="enviar">Enviar</button>
   </form>
 
 
