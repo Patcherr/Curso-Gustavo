@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: #f8f8f8;
     font-family: Arial, sans-serif;
   }
@@ -46,4 +46,69 @@ body {
   button[type="submit"]:hover {
     background-color: #f5f5f5;
   }
-  
+   */
+body {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: beige;
+}
+
+
+
+h1 {
+    text-align: center;
+    background-color: #fff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    background-color: #fff;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.radio-group,
+.checkbox-group {
+    margin-top: 5px;
+    padding: 5px;
+    display: flex;
+
+}
+
+input[type="checkbox"],
+[type="radio"] {
+    margin-left: 15px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
