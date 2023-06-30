@@ -37,7 +37,14 @@
     font-size: 18px;
   }
   button:hover{
-    background-color: #45a049;
+    animation: blink-hover 1s infinite;
+  }
+  
+    
+  @keyframes blink-hover{
+    0% {opacity: 0.8;}
+    50% {opacity: 0.8;}
+    100% {opacity: 0.8;}
   }
   
   .operator {
