@@ -22,9 +22,10 @@ formulario.addEventListener('submit', function(event) {
 }); */
 
 
-const formulario = document.getElementById('miFormulario');
+const formulario = document.getElementById('Formulario');
+const enviar = document.getElementById('enviar');
 
-formulario.addEventListener('submit', function (event) {
+enviar.addEventListener('click', function (event) {
   event.preventDefault();
 
   const nombre = encodeURIComponent(document.getElementById('nombre').value);
@@ -34,11 +35,9 @@ formulario.addEventListener('submit', function (event) {
   const genero = encodeURIComponent(document.querySelector('input[name="genero"]:checked').value);
   const conocimientos = Array.from(document.querySelectorAll('input[name="conocimientos"]:checked')).map(input => input.value);
   const bio = encodeURIComponent(document.getElementById('bio').value);
+  formulario.submit();
 
-  const queryString = `nombre=${nombre}&apellido=${apellido}&dni=${dni}&fechaNacimiento=${fechaNacimiento}&genero=${genero}&conocimientos=${conocimientos.join(',')}&bio=${bio}`;
 
-  // Redireccionar a otro archivo HTML con los datos como query string
-  window.location.href = `form.html?${queryString}`;
 });
 
 const queryString = window.location.search;
@@ -49,18 +48,19 @@ const apellido = urlParams.get('apellido');
 const dni = urlParams.get('dni');
 const fechaNacimiento = urlParams.get('fechaNacimiento');
 const genero = urlParams.get('genero');
-const conocimientos = urlParams.get('conocimientos').split(',');
+const conocimientos = urlParams.get('conocimientos');
 const bio = urlParams.get('bio');
 
 // Ahora puedes hacer lo que desees con los datos del formulario en otro_archivo.html
 // Por ejemplo, puedes mostrar los valores en la página:
-document.getElementById('nombreResultado').textContent = nombre;
-document.getElementById('apellidoResultado').textContent = apellido;
-document.getElementById('dniResultado').textContent = dni;
-document.getElementById('fechaNacimientoResultado').textContent = fechaNacimiento;
-document.getElementById('generoResultado').textContent = genero;
-document.getElementById('conocimientosResultado').textContent = conocimientos;
-document.getElementById('bioResultado').textContent = bio
+document.getElementById('nombreResultado').innerHTML = nombre;
+document.getElementById('apellidoResultado').innerHTML = apellido;
+document.getElementById('dniResultado').innerHTML = dni;
+document.getElementById('fechaNacimientoResultado').innerHTML = fechaNacimiento;
+document.getElementById('generoResultado').innerHTML = genero;
+document.getElementById('conocimientosResultado').innerHTML = conocimientos;
+document.getElementById('bioResultado').innerHTML = bio
+
 
 
 
